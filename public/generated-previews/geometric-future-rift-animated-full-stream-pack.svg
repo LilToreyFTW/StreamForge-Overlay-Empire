@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07131a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1528" height="828" rx="32" fill="rgba(255,255,255,0.04)" stroke="#3ce7ff" stroke-width="2"/>
+  <rect x="78" y="62" width="640" height="106" rx="22" fill="rgba(255,255,255,0.05)" stroke="#f14cff" stroke-opacity="0.35"/>
+  <rect x="1180" y="70" width="300" height="84" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <rect x="24" y="180" width="12" height="520" rx="999" fill="#f14cff" opacity="0.6"/>
+  <rect x="1564" y="180" width="12" height="520" rx="999" fill="#f14cff" opacity="0.6"/>
+  <rect x="1008" y="122" width="500" height="282" rx="24" fill="none" stroke="#3ce7ff" stroke-width="7"/>
+  <rect x="64" y="792" width="1472" height="70" rx="18" fill="rgba(255,255,255,0.05)"/>
+  <text x="94" y="126" fill="#f8fbff" font-size="36" font-family="Arial" font-weight="700">Geometric Future Rift Animated Full Stream Pack</text>
+  <text x="94" y="174" fill="#3ce7ff" font-size="22" font-family="Arial">Full Stream Pack</text>
+  <text x="94" y="218" fill="#cbd5e1" font-size="20" font-family="Arial">futuristic creator HUD suite</text>
+</svg>

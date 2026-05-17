@@ -1,0 +1,140 @@
+{
+  "title": "Metallic Dominion Prime Animated Webcam Overlay",
+  "slug": "metallic-dominion-prime-animated-webcam-overlay",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Metallic Stream",
+  "overlayType": "Webcam Overlay",
+  "inspirationProfile": {
+    "referenceFamily": "metallic-chrome",
+    "originalOnly": true,
+    "summary": "luxury esports control deck using machined steel bevels and chrome edge bars.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "sleek metallic header strips with cold blue highlights"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": {
+      "x": 1188,
+      "y": 644,
+      "width": 560,
+      "height": 314,
+      "transparentCenter": true,
+      "noBlackFill": true,
+      "radius": 22
+    },
+    "lowerBar": null,
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#0b1016",
+    "accent": "#90d7ff",
+    "secondary": "#9ca3af",
+    "tertiary": "#f8fafc"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "steelSheen",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 3400,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 3,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 2600,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 3180,
+        "loop": true,
+        "direction": "horizontal"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2280,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "METALLIC DOMINION PRIME ANIMATED WEBCAM OVERLAY",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "METALLIC STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": true
+  },
+  "exportNotes": {
+    "intendedUse": "Webcam Overlay",
+    "transparentWebcamCenter": true,
+    "noBlackFillInsideCameraRegion": true,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:41.004Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

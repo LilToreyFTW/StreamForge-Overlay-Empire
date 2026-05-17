@@ -1,0 +1,132 @@
+{
+  "title": "Convex Pulse Core Animated Chat Box Overlay",
+  "slug": "convex-pulse-core-animated-chat-box-overlay",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Sci-Fi Stream",
+  "overlayType": "Chat Box Overlay",
+  "inspirationProfile": {
+    "referenceFamily": "convex-purple",
+    "originalOnly": true,
+    "summary": "premium neon intermission suite using stacked concentric arcs and central stage rings.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "condensed centered typography with circular focus"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": null,
+    "lowerBar": null,
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#0d0718",
+    "accent": "#9b4dff",
+    "secondary": "#5f17d9",
+    "tertiary": "#e5d8ff"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "circularGlow",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 3760,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 4,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3020,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 3420,
+        "loop": true,
+        "direction": "vertical"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2520,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "CONVEX PULSE CORE ANIMATED CHAT BOX OVERLAY",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "SCI-FI STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": false
+  },
+  "exportNotes": {
+    "intendedUse": "Chat Box Overlay",
+    "transparentWebcamCenter": false,
+    "noBlackFillInsideCameraRegion": false,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:06.491Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

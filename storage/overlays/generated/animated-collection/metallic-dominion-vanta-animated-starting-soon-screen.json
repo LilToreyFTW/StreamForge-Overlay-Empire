@@ -1,0 +1,132 @@
+{
+  "title": "Metallic Dominion Vanta Animated Starting Soon Screen",
+  "slug": "metallic-dominion-vanta-animated-starting-soon-screen",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Metallic Stream",
+  "overlayType": "Starting Soon Screen",
+  "inspirationProfile": {
+    "referenceFamily": "metallic-chrome",
+    "originalOnly": true,
+    "summary": "luxury esports control deck using machined steel bevels and chrome edge bars.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "sleek metallic header strips with cold blue highlights"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": null,
+    "lowerBar": null,
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#0b1016",
+    "accent": "#90d7ff",
+    "secondary": "#9ca3af",
+    "tertiary": "#f8fafc"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "steelSheen",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4120,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 3,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3020,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2700,
+        "loop": true,
+        "direction": "horizontal"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 1800,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "METALLIC DOMINION VANTA ANIMATED STARTING SOON SCREEN",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "METALLIC STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": false
+  },
+  "exportNotes": {
+    "intendedUse": "Starting Soon Screen",
+    "transparentWebcamCenter": false,
+    "noBlackFillInsideCameraRegion": false,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:44.005Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

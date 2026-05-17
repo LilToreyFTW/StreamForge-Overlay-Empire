@@ -1,0 +1,145 @@
+{
+  "title": "Tainted Ember Rift Animated Full Stream Pack",
+  "slug": "tainted-ember-rift-animated-full-stream-pack",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Tactical Stream",
+  "overlayType": "Full Stream Pack",
+  "inspirationProfile": {
+    "referenceFamily": "tainted-orange",
+    "originalOnly": true,
+    "summary": "warning-lit combat shell using layered armor edges with aggressive corner flares.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "hard-edged labels with segmented bottom plates"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": {
+      "x": 86,
+      "y": 98,
+      "width": 626,
+      "height": 352,
+      "transparentCenter": true,
+      "noBlackFill": true,
+      "radius": 22
+    },
+    "lowerBar": {
+      "x": 64,
+      "y": 948,
+      "width": 1792,
+      "height": 86
+    },
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#120c09",
+    "accent": "#ff7a1a",
+    "secondary": "#ffb347",
+    "tertiary": "#fff0db"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "contourGlow",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 3760,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 4,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3440,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 3420,
+        "loop": true,
+        "direction": "vertical"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2520,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "TAINTED EMBER RIFT ANIMATED FULL STREAM PACK",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "TACTICAL STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": true
+  },
+  "exportNotes": {
+    "intendedUse": "Full Stream Pack",
+    "transparentWebcamCenter": true,
+    "noBlackFillInsideCameraRegion": true,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:24.496Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

@@ -1,14 +1,31 @@
 {
-  "generatedAt": "2026-05-17T02:24:29.216Z",
+  "generatedAt": "2026-05-17T02:28:56.013Z",
   "count": 50,
-  "themes": [
-    "ARC Raiders",
-    "Fortnite",
-    "Overwatch",
-    "Just Chatting"
-  ],
-  "split": {
-    "webcam": 25,
-    "background": 25
-  }
+  "families": [
+    {
+      "key": "convex-purple",
+      "titlePrefix": "Convex Pulse",
+      "specialTag": null
+    },
+    {
+      "key": "tainted-orange",
+      "titlePrefix": "Tainted Ember",
+      "specialTag": null
+    },
+    {
+      "key": "bloody-red",
+      "titlePrefix": "BL0WDART Bloodline",
+      "specialTag": "Custom for BL0WDART"
+    },
+    {
+      "key": "metallic-chrome",
+      "titlePrefix": "Metallic Dominion",
+      "specialTag": null
+    },
+    {
+      "key": "geometric-future",
+      "titlePrefix": "Geometric Future",
+      "specialTag": null
+    }
+  ]
 }

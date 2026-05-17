@@ -1,0 +1,132 @@
+{
+  "title": "Geometric Future Nova Animated Intermission Screen",
+  "slug": "geometric-future-nova-animated-intermission-screen",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Future Stream",
+  "overlayType": "Intermission Screen",
+  "inspirationProfile": {
+    "referenceFamily": "geometric-future",
+    "originalOnly": true,
+    "summary": "futuristic creator HUD suite using clean angular vectors and modular frame cuts.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "modular techno labels with clean geometry"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": null,
+    "lowerBar": null,
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#07131a",
+    "accent": "#3ce7ff",
+    "secondary": "#f14cff",
+    "tertiary": "#f8fbff"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "vectorGrid",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4120,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 4,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 2810,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "gridSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2940,
+        "loop": true,
+        "direction": "vertical"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2040,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "GEOMETRIC FUTURE NOVA ANIMATED INTERMISSION SCREEN",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "FUTURE STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": false
+  },
+  "exportNotes": {
+    "intendedUse": "Intermission Screen",
+    "transparentWebcamCenter": false,
+    "noBlackFillInsideCameraRegion": false,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:57.509Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

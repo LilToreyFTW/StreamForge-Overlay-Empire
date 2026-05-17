@@ -1,0 +1,137 @@
+{
+  "title": "Convex Pulse Onyx Animated Background Overlay",
+  "slug": "convex-pulse-onyx-animated-background-overlay",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Sci-Fi Stream",
+  "overlayType": "Animated Background Overlay",
+  "inspirationProfile": {
+    "referenceFamily": "convex-purple",
+    "originalOnly": true,
+    "summary": "premium neon intermission suite using stacked concentric arcs and central stage rings.",
+    "specialTag": null
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "condensed centered typography with circular focus"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": null,
+    "lowerBar": {
+      "x": 64,
+      "y": 948,
+      "width": 1792,
+      "height": 86
+    },
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#0d0718",
+    "accent": "#9b4dff",
+    "secondary": "#5f17d9",
+    "tertiary": "#e5d8ff"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "circularGlow",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4120,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 4,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 2600,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2940,
+        "loop": true,
+        "direction": "vertical"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2040,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "CONVEX PULSE ONYX ANIMATED BACKGROUND OVERLAY",
+      "fontSize": 34,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "SCI-FI STREAM",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": false
+  },
+  "exportNotes": {
+    "intendedUse": "Animated Background Overlay",
+    "transparentWebcamCenter": false,
+    "noBlackFillInsideCameraRegion": false,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:03.490Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}

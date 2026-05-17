@@ -1,0 +1,145 @@
+{
+  "title": "BL0WDART Bloodline Rift Animated Full Stream Pack",
+  "slug": "bl0wdart-bloodline-rift-animated-full-stream-pack",
+  "schemaVersion": "streamforge.obs.motion.v2",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "BL0WDART Signature",
+  "overlayType": "Full Stream Pack",
+  "inspirationProfile": {
+    "referenceFamily": "bloody-red",
+    "originalOnly": true,
+    "summary": "dark hostile premium broadcast pack using scarred chrome with red slash energy and brutal framing.",
+    "specialTag": "Custom for BL0WDART"
+  },
+  "composition": {
+    "headlineZone": {
+      "x": 80,
+      "y": 56,
+      "width": 640,
+      "height": 110,
+      "style": "ominous centerpiece typography with weapon-grade separators"
+    },
+    "statusZone": {
+      "x": 1450,
+      "y": 64,
+      "width": 320,
+      "height": 88
+    },
+    "cameraFrame": {
+      "x": 96,
+      "y": 104,
+      "width": 612,
+      "height": 344,
+      "transparentCenter": true,
+      "noBlackFill": true,
+      "radius": 22
+    },
+    "lowerBar": {
+      "x": 64,
+      "y": 948,
+      "width": 1792,
+      "height": 86
+    },
+    "leftRail": {
+      "x": 24,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    },
+    "rightRail": {
+      "x": 1864,
+      "y": 190,
+      "width": 32,
+      "height": 620
+    }
+  },
+  "palette": {
+    "background": "#140507",
+    "accent": "#ff2f43",
+    "secondary": "#a30716",
+    "tertiary": "#ffd5da"
+  },
+  "animationLayers": [
+    {
+      "id": "main-glow-field",
+      "type": "slashGlow",
+      "opacity": 0.78,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4120,
+        "loop": true,
+        "easing": "easeInOutSine"
+      }
+    },
+    {
+      "id": "edge-trace",
+      "type": "borderTrace",
+      "strokeWidth": 4,
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3440,
+        "loop": true,
+        "intensityRange": [
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "id": "scan-overlay",
+      "type": "scanlineSweep",
+      "opacity": 0.16,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2940,
+        "loop": true,
+        "direction": "vertical"
+      }
+    },
+    {
+      "id": "badge-pulse",
+      "type": "statusBadge",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2040,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "title",
+      "text": "BL0WDART BLOODLINE RIFT ANIMATED FULL STREAM PACK",
+      "fontSize": 40,
+      "letterSpacing": 0.18
+    },
+    {
+      "id": "subtitle",
+      "text": "Custom for BL0WDART",
+      "fontSize": 16,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsHints": {
+    "renderMode": "browser-source",
+    "recommendedResolution": "1920x1080",
+    "recommendedRefreshRate": 60,
+    "supportsTransparentCenter": true
+  },
+  "exportNotes": {
+    "intendedUse": "Full Stream Pack",
+    "transparentWebcamCenter": true,
+    "noBlackFillInsideCameraRegion": true,
+    "animationGrade": "premium-ref-inspired"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:29:39.503Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
+  }
+}
