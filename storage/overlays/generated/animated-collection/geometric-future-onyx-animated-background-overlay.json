@@ -17,6 +17,7 @@
     "specialTag": null
   },
   "composition": {
+    "layoutFamily": "vector",
     "headlineZone": {
       "x": 80,
       "y": 56,
@@ -48,7 +49,57 @@
       "y": 190,
       "width": 32,
       "height": 620
-    }
+    },
+    "modules": [
+      {
+        "id": "main-cam",
+        "x": 102,
+        "y": 120,
+        "width": 820,
+        "height": 438,
+        "role": "main-scene"
+      },
+      {
+        "id": "side-cam",
+        "x": 1188,
+        "y": 118,
+        "width": 488,
+        "height": 268,
+        "role": "side-cam"
+      },
+      {
+        "id": "bottom-cam",
+        "x": 104,
+        "y": 634,
+        "width": 494,
+        "height": 272,
+        "role": "chat-box"
+      },
+      {
+        "id": "chip-a",
+        "x": 704,
+        "y": 638,
+        "width": 242,
+        "height": 62,
+        "role": "data-chip"
+      },
+      {
+        "id": "chip-b",
+        "x": 704,
+        "y": 724,
+        "width": 242,
+        "height": 62,
+        "role": "data-chip"
+      },
+      {
+        "id": "chip-c",
+        "x": 704,
+        "y": 810,
+        "width": 242,
+        "height": 62,
+        "role": "data-chip"
+      }
+    ]
   },
   "palette": {
     "background": "#07131a",
@@ -130,7 +181,7 @@
     "animationGrade": "premium-ref-inspired"
   },
   "metadata": {
-    "createdAt": "2026-05-17T02:30:03.510Z",
+    "createdAt": "2026-05-17T02:41:00.462Z",
     "createdBy": "StreamForge Overlay Empire",
     "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
   }

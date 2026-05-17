@@ -1,19 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#140507" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-  </defs>
-  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
-  <rect x="36" y="36" width="1528" height="828" rx="32" fill="rgba(255,255,255,0.04)" stroke="#ff2f43" stroke-width="2"/>
-  <rect x="78" y="62" width="640" height="106" rx="22" fill="rgba(255,255,255,0.05)" stroke="#a30716" stroke-opacity="0.35"/>
-  <rect x="1180" y="70" width="300" height="84" rx="18" fill="rgba(255,255,255,0.05)"/>
-  <rect x="24" y="180" width="12" height="520" rx="999" fill="#a30716" opacity="0.6"/>
-  <rect x="1564" y="180" width="12" height="520" rx="999" fill="#a30716" opacity="0.6"/>
-  
-  <rect x="64" y="792" width="1472" height="70" rx="18" fill="rgba(255,255,255,0.05)"/>
-  <text x="94" y="126" fill="#ffd5da" font-size="36" font-family="Arial" font-weight="700">BL0WDART Bloodline Specter Animated BRB Screen</text>
-  <text x="94" y="174" fill="#ff2f43" font-size="22" font-family="Arial">BRB Screen</text>
-  <text x="94" y="218" fill="#cbd5e1" font-size="20" font-family="Arial">dark hostile premium broadcast pack</text>
-</svg>
+    <rect width="1600" height="900" fill="#090909"/>
+    <rect x="26" y="26" width="1548" height="848" rx="18" fill="#140507"/>
+    <path d="M0 160 L 340 0 L 500 0 L 140 220 Z" fill="#ff2f43" opacity="0.18"/>
+    <path d="M1110 900 L 1600 640 L 1600 900 Z" fill="#ff2f43" opacity="0.14"/>
+    <rect x="84" y="102" width="980" height="584" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <rect x="1110" y="100" width="282" height="150" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <rect x="1110" y="276" width="282" height="206" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <path d="M1434 272 L 1544 272 L 1500 330 L 1390 330 Z" fill="rgba(255,255,255,0.06)" stroke="#ff2f43" stroke-width="3"/>
+    <path d="M1434 352 L 1544 352 L 1500 410 L 1390 410 Z" fill="rgba(255,255,255,0.06)" stroke="#ff2f43" stroke-width="3"/>
+    <path d="M1434 432 L 1544 432 L 1500 490 L 1390 490 Z" fill="rgba(255,255,255,0.06)" stroke="#ff2f43" stroke-width="3"/>
+    <rect x="94" y="748" width="282" height="112" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <rect x="414" y="748" width="282" height="112" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <rect x="734" y="748" width="282" height="112" fill="rgba(255,255,255,0.03)" stroke="#ff2f43" stroke-width="4"/>
+    <text x="1096" y="600" fill="#ffd5da" font-size="38" font-family="Arial" font-weight="700">BL0WDART Bloodline Specter Animated BRB Screen</text>
+    <text x="1096" y="648" fill="#ff2f43" font-size="24" font-family="Arial">BRB Screen</text>
+    <text x="1096" y="694" fill="#ffd5da" font-size="20" font-family="Arial">Custom for BL0WDART</text>
+    </svg>

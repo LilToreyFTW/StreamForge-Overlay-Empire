@@ -17,6 +17,7 @@
     "specialTag": "Custom for BL0WDART"
   },
   "composition": {
+    "layoutFamily": "slashes",
     "headlineZone": {
       "x": 80,
       "y": 56,
@@ -43,7 +44,81 @@
       "y": 190,
       "width": 32,
       "height": 620
-    }
+    },
+    "modules": [
+      {
+        "id": "main-stage",
+        "x": 74,
+        "y": 102,
+        "width": 1136,
+        "height": 640,
+        "role": "main-scene"
+      },
+      {
+        "id": "top-cam",
+        "x": 1266,
+        "y": 100,
+        "width": 386,
+        "height": 214,
+        "role": "mini-cam"
+      },
+      {
+        "id": "chat-stack",
+        "x": 1266,
+        "y": 332,
+        "width": 386,
+        "height": 258,
+        "role": "chat-box"
+      },
+      {
+        "id": "social-1",
+        "x": 1674,
+        "y": 332,
+        "width": 190,
+        "height": 64,
+        "role": "social-tab"
+      },
+      {
+        "id": "social-2",
+        "x": 1674,
+        "y": 410,
+        "width": 190,
+        "height": 64,
+        "role": "social-tab"
+      },
+      {
+        "id": "social-3",
+        "x": 1674,
+        "y": 488,
+        "width": 190,
+        "height": 64,
+        "role": "social-tab"
+      },
+      {
+        "id": "status-a",
+        "x": 80,
+        "y": 820,
+        "width": 344,
+        "height": 158,
+        "role": "screen-card"
+      },
+      {
+        "id": "status-b",
+        "x": 454,
+        "y": 820,
+        "width": 344,
+        "height": 158,
+        "role": "screen-card"
+      },
+      {
+        "id": "status-c",
+        "x": 828,
+        "y": 820,
+        "width": 344,
+        "height": 158,
+        "role": "screen-card"
+      }
+    ]
   },
   "palette": {
     "background": "#140507",
@@ -125,7 +200,7 @@
     "animationGrade": "premium-ref-inspired"
   },
   "metadata": {
-    "createdAt": "2026-05-17T02:29:36.503Z",
+    "createdAt": "2026-05-17T02:40:33.457Z",
     "createdBy": "StreamForge Overlay Empire",
     "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
   }

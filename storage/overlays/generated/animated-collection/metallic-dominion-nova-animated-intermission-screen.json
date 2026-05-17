@@ -17,6 +17,7 @@
     "specialTag": null
   },
   "composition": {
+    "layoutFamily": "chrome",
     "headlineZone": {
       "x": 80,
       "y": 56,
@@ -43,7 +44,33 @@
       "y": 190,
       "width": 32,
       "height": 620
-    }
+    },
+    "modules": [
+      {
+        "id": "hero-shell",
+        "x": 120,
+        "y": 120,
+        "width": 1030,
+        "height": 520,
+        "role": "main-scene"
+      },
+      {
+        "id": "right-shell",
+        "x": 1220,
+        "y": 140,
+        "width": 520,
+        "height": 310,
+        "role": "webcam-panel"
+      },
+      {
+        "id": "banner-shell",
+        "x": 160,
+        "y": 748,
+        "width": 1440,
+        "height": 110,
+        "role": "footer-banner"
+      }
+    ]
   },
   "palette": {
     "background": "#0b1016",
@@ -125,7 +152,7 @@
     "animationGrade": "premium-ref-inspired"
   },
   "metadata": {
-    "createdAt": "2026-05-17T02:29:42.504Z",
+    "createdAt": "2026-05-17T02:40:39.458Z",
     "createdBy": "StreamForge Overlay Empire",
     "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
   }

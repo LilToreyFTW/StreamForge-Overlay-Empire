@@ -17,6 +17,7 @@
     "specialTag": null
   },
   "composition": {
+    "layoutFamily": "armor",
     "headlineZone": {
       "x": 80,
       "y": 56,
@@ -48,7 +49,49 @@
       "y": 190,
       "width": 32,
       "height": 620
-    }
+    },
+    "modules": [
+      {
+        "id": "hero-window",
+        "x": 120,
+        "y": 104,
+        "width": 736,
+        "height": 390,
+        "role": "main-scene"
+      },
+      {
+        "id": "title-card",
+        "x": 1010,
+        "y": 118,
+        "width": 738,
+        "height": 202,
+        "role": "title-card"
+      },
+      {
+        "id": "bottom-left",
+        "x": 102,
+        "y": 742,
+        "width": 498,
+        "height": 170,
+        "role": "screen-card"
+      },
+      {
+        "id": "bottom-mid",
+        "x": 714,
+        "y": 742,
+        "width": 498,
+        "height": 170,
+        "role": "screen-card"
+      },
+      {
+        "id": "bottom-right",
+        "x": 1326,
+        "y": 742,
+        "width": 498,
+        "height": 170,
+        "role": "screen-card"
+      }
+    ]
   },
   "palette": {
     "background": "#120c09",
@@ -130,7 +173,7 @@
     "animationGrade": "premium-ref-inspired"
   },
   "metadata": {
-    "createdAt": "2026-05-17T02:29:18.494Z",
+    "createdAt": "2026-05-17T02:40:15.453Z",
     "createdBy": "StreamForge Overlay Empire",
     "referenceUsage": "Original reinterpretation inspired by linked references; not a direct clone."
   }
