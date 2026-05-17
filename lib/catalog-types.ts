@@ -1,0 +1,21 @@
+export type StoreProduct = {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  price: number;
+  gameCategory: string;
+  overlayType: string;
+  previewImage: string;
+  downloadFilePath: string;
+  includedFiles: string[];
+  ratingAverage: number;
+  totalSales: number;
+  isFeatured: boolean;
+  isActive: boolean;
+  createdAt: string | Date;
+  updatedAt: string | Date;
+  isCustomizable?: boolean;
+  customizationLabel?: string;
+  templateKey?: string;
+};

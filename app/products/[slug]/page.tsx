@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { AddToCartButton } from "@/components/products/product-interactions";
+import { CustomizeDownloadForm } from "@/components/products/customize-download-form";
 import { ButtonLink } from "@/components/ui/button";
 import { ProductCard } from "@/components/products/product-card";
 import { formatCurrency } from "@/lib/utils";
@@ -11,6 +12,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const product = await getProductBySlug(slug);
   if (!product) notFound();
   const related = await getRelatedProducts(product.gameCategory, product.id);
+  const isTemplateProduct = "templateKey" in product;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -26,9 +28,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <p className="text-slate-300">{product.description}</p>
           <div className="grid gap-3 text-sm text-slate-300">
             <p>Included files: {product.includedFiles.join(", ")}</p>
-            <p>Compatibility: OBS Studio scene import JSON.</p>
+            <p>
+              Compatibility: {isTemplateProduct ? "OBS browser sources using included HTML/CSS files." : "OBS Studio scene import JSON."}
+            </p>
             <p>Download info: Instant access after successful Stripe payment.</p>
-            <p>Installation: Download the JSON file, import into OBS, then relink assets if desired.</p>
+            <p>
+              Installation: {isTemplateProduct
+                ? "Download the package, keep the folder structure intact, then add the included HTML files as OBS browser sources."
+                : "Download the JSON file, import into OBS, then relink assets if desired."}
+            </p>
             {product.overlayType === "Webcam Overlay" ? (
               <p className="font-semibold text-cyan-300">Transparent webcam center — no black box.</p>
             ) : null}
@@ -39,6 +47,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               Purchase now
             </ButtonLink>
           </div>
+          {"isCustomizable" in product && product.isCustomizable ? (
+            <CustomizeDownloadForm
+              slug={product.slug}
+              label={product.customizationLabel ?? "Stream name"}
+            />
+          ) : null}
         </div>
       </div>
       <section className="mt-14">

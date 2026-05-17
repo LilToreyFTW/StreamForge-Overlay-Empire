@@ -1,0 +1,74 @@
+{
+  "sceneName": "Call of Duty Prime Webcam Overlay",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Call of Duty",
+  "overlayType": "Webcam Overlay",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Call of Duty Prime Webcam Overlay",
+      "fontSize": 52,
+      "color": "#7cf2ff"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#48b7ff"
+    },
+    {
+      "name": "status",
+      "text": "Webcam Overlay",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": {
+    "x": 1270,
+    "y": 680,
+    "width": 540,
+    "height": 304,
+    "transparentCenter": true,
+    "note": "Transparent webcam center — no black box."
+  },
+  "chatBoxPlacement": null,
+  "alertBoxPlacement": null,
+  "colorThemeValues": {
+    "accent": "#7cf2ff",
+    "glow": "#48b7ff",
+    "description": "Tactical steel, HUD lines, and elite squad precision."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:13:25.711Z"
+}

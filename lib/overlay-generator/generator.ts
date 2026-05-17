@@ -1,11 +1,31 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import type { StoreProduct } from "@/lib/catalog-types";
 import { getDb } from "@/lib/db";
 import { GAME_THEMES } from "@/lib/constants";
 import { clampPrice, slugify } from "@/lib/utils";
 
 const STORAGE_ROOT = path.join(process.cwd(), "storage", "overlays", "generated");
 const PREVIEW_ROOT = path.join(process.cwd(), "public", "generated-previews");
+const FALLBACK_CATALOG_PATH = path.join(process.cwd(), "storage", "overlays", "fallback-catalog.json");
+
+function isDatabaseUnavailable(error: unknown) {
+  if (!(error instanceof Error)) return false;
+  return error.message.includes("Can't reach database server") || error.name.includes("PrismaClientInitializationError");
+}
+
+async function readFallbackCatalog() {
+  try {
+    const raw = await readFile(FALLBACK_CATALOG_PATH, "utf8");
+    return JSON.parse(raw) as StoreProduct[];
+  } catch {
+    return [];
+  }
+}
+
+async function writeFallbackCatalog(products: StoreProduct[]) {
+  await writeFile(FALLBACK_CATALOG_PATH, JSON.stringify(products, null, 2), "utf8");
+}
 
 function randomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -99,18 +119,32 @@ export async function generateOverlayBatch(input: {
 }) {
   await mkdir(STORAGE_ROOT, { recursive: true });
   await mkdir(PREVIEW_ROOT, { recursive: true });
-  const db = getDb();
+  let batch = {
+    id: `local-${Date.now()}`,
+    gameCategory: input.gameCategory,
+    overlayType: input.overlayType,
+    quantity: input.quantity,
+    status: "PENDING",
+    createdAt: new Date(),
+  };
+  let dbAvailable = true;
+  const fallbackCatalog = await readFallbackCatalog();
 
-  const batch = await db.generatedOverlayBatch.create({
-    data: {
-      gameCategory: input.gameCategory,
-      overlayType: input.overlayType,
-      quantity: input.quantity,
-      status: "PENDING",
-    },
-  });
+  try {
+    batch = await getDb().generatedOverlayBatch.create({
+      data: {
+        gameCategory: input.gameCategory,
+        overlayType: input.overlayType,
+        quantity: input.quantity,
+        status: "PENDING",
+      },
+    });
+  } catch (error) {
+    if (!isDatabaseUnavailable(error)) throw error;
+    dbAvailable = false;
+  }
 
-  const createdProducts = [];
+  const createdProducts: StoreProduct[] = [];
   for (let i = 0; i < input.quantity; i += 1) {
     const title = createProductTitle(input.gameCategory, input.overlayType, i);
     const slug = `${slugify(title)}-${Date.now()}-${i}`;
@@ -122,8 +156,8 @@ export async function generateOverlayBatch(input: {
     await writeFile(jsonPath, JSON.stringify(createObsJson(input.gameCategory, input.overlayType, title), null, 2));
     await writeFile(previewPath, createPreviewSvg(input.gameCategory, input.overlayType, title), "utf8");
 
-    if (input.publish) {
-      const product = await db.product.create({
+    if (input.publish && dbAvailable) {
+      const product = await getDb().product.create({
         data: {
           title,
           slug,
@@ -138,14 +172,44 @@ export async function generateOverlayBatch(input: {
           isActive: true,
         },
       });
-      createdProducts.push(product);
+      createdProducts.push({
+        ...product,
+        createdAt: product.createdAt.toISOString(),
+        updatedAt: product.updatedAt.toISOString(),
+      });
+    } else if (input.publish) {
+      const now = new Date().toISOString();
+      createdProducts.push({
+        id: `local-${slug}`,
+        title,
+        slug,
+        description: createDescription(input.gameCategory, input.overlayType),
+        price,
+        gameCategory: input.gameCategory,
+        overlayType: input.overlayType,
+        previewImage: `/generated-previews/${previewFilename}`,
+        downloadFilePath: `${slug}.json`,
+        includedFiles: ["OBS scene JSON", "Installation guide", "Transparent preview asset"],
+        ratingAverage: 4.8,
+        totalSales: 0,
+        isFeatured: false,
+        isActive: true,
+        createdAt: now,
+        updatedAt: now,
+      });
     }
   }
 
-  await db.generatedOverlayBatch.update({
-    where: { id: batch.id },
-    data: { status: "COMPLETED" },
-  });
+  if (input.publish && !dbAvailable) {
+    await writeFallbackCatalog([...createdProducts, ...fallbackCatalog]);
+  }
+
+  if (dbAvailable) {
+    await getDb().generatedOverlayBatch.update({
+      where: { id: batch.id },
+      data: { status: "COMPLETED" },
+    });
+  }
 
   return { batch, createdProducts };
 }

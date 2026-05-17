@@ -1,0 +1,67 @@
+{
+  "sceneName": "Subnautica 2 Prime Starting Soon Screen",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Subnautica 2",
+  "overlayType": "Starting Soon Screen",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Subnautica 2 Prime Starting Soon Screen",
+      "fontSize": 52,
+      "color": "#7af6ff"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#24c8ff"
+    },
+    {
+      "name": "status",
+      "text": "Starting Soon Screen",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": null,
+  "chatBoxPlacement": null,
+  "alertBoxPlacement": null,
+  "colorThemeValues": {
+    "accent": "#7af6ff",
+    "glow": "#24c8ff",
+    "description": "Deep-ocean glass panels and bioluminescent blue depth."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:14:11.844Z"
+}

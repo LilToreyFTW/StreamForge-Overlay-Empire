@@ -1,0 +1,84 @@
+{
+  "sceneName": "Escape from Tarkov Prime Full Stream Pack",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Escape from Tarkov",
+  "overlayType": "Full Stream Pack",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Escape from Tarkov Prime Full Stream Pack",
+      "fontSize": 52,
+      "color": "#c0ff88"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#8cf14a"
+    },
+    {
+      "name": "status",
+      "text": "Full Stream Pack",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": {
+    "x": 1270,
+    "y": 680,
+    "width": 540,
+    "height": 304,
+    "transparentCenter": true,
+    "note": "Transparent webcam center — no black box."
+  },
+  "chatBoxPlacement": {
+    "x": 72,
+    "y": 738,
+    "width": 472,
+    "height": 252
+  },
+  "alertBoxPlacement": {
+    "x": 720,
+    "y": 68,
+    "width": 480,
+    "height": 140
+  },
+  "colorThemeValues": {
+    "accent": "#c0ff88",
+    "glow": "#8cf14a",
+    "description": "Extraction-grade utility panels and raid-callout framing."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:14:30.149Z"
+}

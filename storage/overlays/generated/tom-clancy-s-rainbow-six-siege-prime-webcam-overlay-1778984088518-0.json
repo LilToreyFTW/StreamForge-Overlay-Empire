@@ -1,0 +1,74 @@
+{
+  "sceneName": "Tom Clancy's Rainbow Six Siege Prime Webcam Overlay",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Tom Clancy's Rainbow Six Siege",
+  "overlayType": "Webcam Overlay",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Tom Clancy's Rainbow Six Siege Prime Webcam Overlay",
+      "fontSize": 52,
+      "color": "#8ad2ff"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#49a8ff"
+    },
+    {
+      "name": "status",
+      "text": "Webcam Overlay",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": {
+    "x": 1270,
+    "y": 680,
+    "width": 540,
+    "height": 304,
+    "transparentCenter": true,
+    "note": "Transparent webcam center — no black box."
+  },
+  "chatBoxPlacement": null,
+  "alertBoxPlacement": null,
+  "colorThemeValues": {
+    "accent": "#8ad2ff",
+    "glow": "#49a8ff",
+    "description": "Operator-inspired tactical framing and breach cues."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:14:48.518Z"
+}

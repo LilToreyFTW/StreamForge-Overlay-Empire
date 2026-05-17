@@ -10,7 +10,8 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
-    "generate:overlays": "tsx scripts/generate-overlays.ts"
+    "generate:overlays": "tsx scripts/generate-overlays.ts",
+    "import:templates": "tsx scripts/import-template-overlays.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -20,6 +21,7 @@
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "jszip": "^3.10.1",
     "lucide-react": "^1.16.0",
     "next": "16.2.6",
     "prisma": "^6.9.0",

@@ -1,5 +1,11 @@
 import { subDays } from "date-fns";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { TEMPLATE_PRODUCTS } from "@/lib/template-products";
 import { getDb } from "@/lib/db";
+import type { StoreProduct } from "@/lib/catalog-types";
+
+const FALLBACK_CATALOG_PATH = path.join(process.cwd(), "storage", "overlays", "fallback-catalog.json");
 
 function isDatabaseUnavailable(error: unknown) {
   if (!(error instanceof Error)) return false;
@@ -17,7 +23,7 @@ export async function getActiveProducts() {
       orderBy: [{ isFeatured: "desc" }, { createdAt: "desc" }],
     });
   } catch (error) {
-    if (isDatabaseUnavailable(error)) return [];
+    if (isDatabaseUnavailable(error)) return readFallbackCatalog();
     throw error;
   }
 }
@@ -28,7 +34,10 @@ export async function getProductBySlug(slug: string) {
       where: { slug },
     });
   } catch (error) {
-    if (isDatabaseUnavailable(error)) return null;
+    if (isDatabaseUnavailable(error)) {
+      const products = await readFallbackCatalog();
+      return products.find((product) => product.slug === slug) ?? null;
+    }
     throw error;
   }
 }
@@ -45,7 +54,12 @@ export async function getRelatedProducts(gameCategory: string, excludeId: string
       orderBy: { createdAt: "desc" },
     });
   } catch (error) {
-    if (isDatabaseUnavailable(error)) return [];
+    if (isDatabaseUnavailable(error)) {
+      const products = await readFallbackCatalog();
+      return products
+        .filter((product) => product.isActive && product.gameCategory === gameCategory && product.id !== excludeId)
+        .slice(0, 3);
+    }
     throw error;
   }
 }
@@ -109,5 +123,14 @@ export async function getDashboardMetrics() {
       };
     }
     throw error;
+  }
+}
+
+async function readFallbackCatalog(): Promise<StoreProduct[]> {
+  try {
+    const raw = await readFile(FALLBACK_CATALOG_PATH, "utf8");
+    return JSON.parse(raw) as StoreProduct[];
+  } catch {
+    return TEMPLATE_PRODUCTS;
   }
 }

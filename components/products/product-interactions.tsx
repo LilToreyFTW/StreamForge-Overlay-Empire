@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product } from "@prisma/client";
 import { Button } from "@/components/ui/button";
+import type { StoreProduct } from "@/lib/catalog-types";
 
 type CartItem = {
   id: string;
@@ -27,7 +27,7 @@ function writeCart(items: CartItem[]) {
   window.dispatchEvent(new CustomEvent("cart-updated"));
 }
 
-export function AddToCartButton({ product }: { product: Product }) {
+export function AddToCartButton({ product }: { product: StoreProduct }) {
   const [added, setAdded] = useState(() => readCart().some((item) => item.id === product.id));
 
   useEffect(() => {

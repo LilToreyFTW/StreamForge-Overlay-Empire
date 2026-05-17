@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@prisma/client";
 import { Card } from "@/components/ui/card";
+import type { StoreProduct } from "@/lib/catalog-types";
 import { formatCurrency } from "@/lib/utils";
 import { AddToCartButton } from "@/components/products/product-interactions";
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product }: { product: StoreProduct }) {
   return (
     <Card className="overflow-hidden p-0">
       <div className="relative aspect-[16/10] overflow-hidden">

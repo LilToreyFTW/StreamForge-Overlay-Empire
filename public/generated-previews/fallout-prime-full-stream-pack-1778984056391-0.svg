@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060b12" />
+      <stop offset="100%" stop-color="#101827" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" rx="36"/>
+  <rect x="48" y="48" width="1504" height="804" rx="32" fill="rgba(255,255,255,0.05)" stroke="#c4ff58" stroke-width="2"/>
+  <rect x="76" y="76" width="360" height="748" rx="28" fill="rgba(255,255,255,0.04)"/>
+  <rect x="468" y="76" width="1056" height="520" rx="32" fill="rgba(255,255,255,0.03)" stroke="#f3e178" stroke-opacity="0.6"/>
+  <rect x="1210" y="622" width="274" height="160" rx="24" fill="none" stroke="#f3e178" stroke-width="8"/>
+  <text x="90" y="146" fill="#f3e178" font-size="54" font-family="Arial, sans-serif" font-weight="700">Fallout Prime Full Stream Pack</text>
+  <text x="90" y="212" fill="#e2e8f0" font-size="28" font-family="Arial, sans-serif">Fallout</text>
+  <text x="90" y="258" fill="#94a3b8" font-size="24" font-family="Arial, sans-serif">Full Stream Pack</text>
+  <text x="90" y="784" fill="#c4ff58" font-size="26" font-family="Arial, sans-serif">OBS JSON included</text>
+</svg>

@@ -1,0 +1,74 @@
+{
+  "sceneName": "Subnautica 2 Prime Webcam Overlay",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Subnautica 2",
+  "overlayType": "Webcam Overlay",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Subnautica 2 Prime Webcam Overlay",
+      "fontSize": 52,
+      "color": "#7af6ff"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#24c8ff"
+    },
+    {
+      "name": "status",
+      "text": "Webcam Overlay",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": {
+    "x": 1270,
+    "y": 680,
+    "width": 540,
+    "height": 304,
+    "transparentCenter": true,
+    "note": "Transparent webcam center — no black box."
+  },
+  "chatBoxPlacement": null,
+  "alertBoxPlacement": null,
+  "colorThemeValues": {
+    "accent": "#7af6ff",
+    "glow": "#24c8ff",
+    "description": "Deep-ocean glass panels and bioluminescent blue depth."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:14:07.266Z"
+}

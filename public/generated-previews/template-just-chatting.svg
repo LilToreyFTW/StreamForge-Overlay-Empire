@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" rx="40" fill="#050914"/>
+  <rect x="40" y="40" width="1520" height="820" rx="32" fill="rgba(255,255,255,0.04)" stroke="#f472b6" stroke-width="2"/>
+  <rect x="76" y="76" width="1040" height="580" rx="28" fill="rgba(255,255,255,0.025)"/>
+  <rect x="1170" y="130" width="290" height="510" rx="26" fill="none" stroke="#f472b6" stroke-width="6"/>
+  <text x="96" y="170" fill="#f472b6" font-size="54" font-family="Arial" font-weight="700">Just Chatting Neon Webcam Frame</text>
+  <text x="96" y="236" fill="#dbeafe" font-size="28" font-family="Arial">Just Chatting</text>
+  <text x="96" y="302" fill="#94a3b8" font-size="24" font-family="Arial">Webcam Overlay</text>
+  <text x="96" y="780" fill="#67e8f9" font-size="24" font-family="Arial">Custom stream name supported on-site</text>
+</svg>

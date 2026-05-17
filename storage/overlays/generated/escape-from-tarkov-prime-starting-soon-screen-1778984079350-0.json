@@ -1,0 +1,67 @@
+{
+  "sceneName": "Escape from Tarkov Prime Starting Soon Screen",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "gameCategory": "Escape from Tarkov",
+  "overlayType": "Starting Soon Screen",
+  "sources": [
+    {
+      "type": "backgroundShape",
+      "name": "chrome-shell",
+      "color": "#0a1018"
+    },
+    {
+      "type": "imagePlaceholder",
+      "name": "frame-top",
+      "path": "frame-top.png"
+    },
+    {
+      "type": "text",
+      "name": "stream-title",
+      "text": "Escape from Tarkov Prime Starting Soon Screen",
+      "fontSize": 52,
+      "color": "#c0ff88"
+    }
+  ],
+  "textLayers": [
+    {
+      "name": "handle",
+      "text": "@streamforge",
+      "x": 92,
+      "y": 84,
+      "color": "#8cf14a"
+    },
+    {
+      "name": "status",
+      "text": "Starting Soon Screen",
+      "x": 92,
+      "y": 148,
+      "color": "#f8fafc"
+    }
+  ],
+  "imagePlaceholderLayers": [
+    {
+      "name": "logo-slot",
+      "x": 1600,
+      "y": 72,
+      "width": 200,
+      "height": 200
+    }
+  ],
+  "webcamFramePlacement": null,
+  "chatBoxPlacement": null,
+  "alertBoxPlacement": null,
+  "colorThemeValues": {
+    "accent": "#c0ff88",
+    "glow": "#8cf14a",
+    "description": "Extraction-grade utility panels and raid-callout framing."
+  },
+  "metadata": {
+    "compatibility": "OBS Studio JSON import",
+    "createdBy": "StreamForge Overlay Empire generator",
+    "originalArtworkOnly": true
+  },
+  "createdDate": "2026-05-17T02:14:39.350Z"
+}
