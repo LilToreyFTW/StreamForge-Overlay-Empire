@@ -12,7 +12,8 @@
     "db:seed": "tsx prisma/seed.ts",
     "generate:overlays": "tsx scripts/generate-overlays.ts",
     "import:templates": "tsx scripts/import-template-overlays.ts",
-    "generate:animated-overlays": "tsx scripts/generate-animated-obs-collection.ts"
+    "generate:animated-overlays": "tsx scripts/generate-animated-obs-collection.ts",
+    "build:obs-scenes": "tsx scripts/build-obs-scene-pack.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
