@@ -1,0 +1,152 @@
+{
+  "title": "Fortnite Live Sync Animated Webcam Overlay",
+  "slug": "fortnite-live-sync-animated-webcam-overlay",
+  "schemaVersion": "streamforge.obs.motion.v1",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Fortnite",
+  "overlayType": "Webcam Overlay",
+  "sourceInspiration": {
+    "template": "fortnite",
+    "notes": "Original animation system inspired by your Fortnite overlay direction without copying proprietary art."
+  },
+  "layout": {
+    "cameraFrame": {
+      "x": 1234,
+      "y": 152,
+      "width": 604,
+      "height": 338,
+      "transparentCenter": true,
+      "safeInset": 16
+    },
+    "sceneBars": null,
+    "callouts": [
+      {
+        "x": 70,
+        "y": 80,
+        "width": 420,
+        "height": 72,
+        "label": "title cluster"
+      },
+      {
+        "x": 1450,
+        "y": 80,
+        "width": 360,
+        "height": 72,
+        "label": "live status"
+      }
+    ]
+  },
+  "visualStyle": {
+    "energy": "victory neon pulse",
+    "shapeLanguage": "rounded-card esports shell",
+    "accentColor": "#47f3ff",
+    "secondaryColor": "#ffd54a",
+    "atmosphere": "storm circle skyline with broadcast focus"
+  },
+  "animatedSources": [
+    {
+      "id": "ambient-gradient",
+      "type": "gradientField",
+      "blendMode": "screen",
+      "opacity": 0.72,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4020,
+        "easing": "easeInOutSine",
+        "loop": true,
+        "keyframes": [
+          {
+            "progress": 0,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          },
+          {
+            "progress": 0.5,
+            "offsetX": 0.03,
+            "offsetY": 0.02,
+            "scale": 1.03
+          },
+          {
+            "progress": 1,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "scanline-hum",
+      "type": "lineSweep",
+      "opacity": 0.18,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2550,
+        "direction": "horizontal",
+        "loop": true
+      }
+    },
+    {
+      "id": "accent-trace",
+      "type": "borderTrace",
+      "color": "#47f3ff",
+      "secondaryColor": "#ffd54a",
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3450,
+        "loop": true,
+        "intensityRange": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "id": "status-pulse",
+      "type": "statusBadge",
+      "anchor": "frame-corner",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 1800,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "game-label",
+      "text": "FORTNITE",
+      "fontSize": 34,
+      "letterSpacing": 0.16
+    },
+    {
+      "id": "mode-label",
+      "text": "LIVE SYNC",
+      "fontSize": 18,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsBrowserSourceHints": {
+    "baseWidth": 1920,
+    "baseHeight": 1080,
+    "recommendedFps": 60,
+    "refreshWhenSceneBecomesActive": true
+  },
+  "exportNotes": {
+    "transparentWebcamCenter": true,
+    "noBlackFillInsideCameraRegion": true,
+    "intendedUse": "browser source webcam frame"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:24:50.204Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "originalArtworkOnly": true,
+    "animationTier": "premium"
+  }
+}

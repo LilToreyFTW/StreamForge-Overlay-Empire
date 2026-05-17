@@ -1,0 +1,158 @@
+{
+  "title": "Just Chatting Victory Wash Animated Background Overlay",
+  "slug": "just-chatting-victory-wash-animated-background-overlay",
+  "schemaVersion": "streamforge.obs.motion.v1",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Just Chatting",
+  "overlayType": "Animated Background Overlay",
+  "sourceInspiration": {
+    "template": "just-chatting",
+    "notes": "Original animation system inspired by your Just Chatting overlay direction without copying proprietary art."
+  },
+  "layout": {
+    "cameraFrame": null,
+    "sceneBars": {
+      "top": {
+        "x": 44,
+        "y": 34,
+        "width": 1832,
+        "height": 104
+      },
+      "bottom": {
+        "x": 44,
+        "y": 942,
+        "width": 1832,
+        "height": 104
+      }
+    },
+    "callouts": [
+      {
+        "x": 70,
+        "y": 80,
+        "width": 420,
+        "height": 72,
+        "label": "title cluster"
+      },
+      {
+        "x": 1450,
+        "y": 80,
+        "width": 360,
+        "height": 72,
+        "label": "live status"
+      }
+    ]
+  },
+  "visualStyle": {
+    "energy": "chill ambient neon",
+    "shapeLanguage": "soft glass lounge frame",
+    "accentColor": "#53fc18",
+    "secondaryColor": "#f472b6",
+    "atmosphere": "late-night creator lounge"
+  },
+  "animatedSources": [
+    {
+      "id": "ambient-gradient",
+      "type": "gradientField",
+      "blendMode": "screen",
+      "opacity": 0.72,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4860,
+        "easing": "easeInOutSine",
+        "loop": true,
+        "keyframes": [
+          {
+            "progress": 0,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          },
+          {
+            "progress": 0.5,
+            "offsetX": 0.03,
+            "offsetY": 0.02,
+            "scale": 1.03
+          },
+          {
+            "progress": 1,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "scanline-hum",
+      "type": "lineSweep",
+      "opacity": 0.18,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 3250,
+        "direction": "vertical",
+        "loop": true
+      }
+    },
+    {
+      "id": "accent-trace",
+      "type": "borderTrace",
+      "color": "#53fc18",
+      "secondaryColor": "#f472b6",
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 4150,
+        "loop": true,
+        "intensityRange": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "id": "status-pulse",
+      "type": "statusBadge",
+      "anchor": "top-right",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 2020,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "game-label",
+      "text": "JUST CHATTING",
+      "fontSize": 34,
+      "letterSpacing": 0.16
+    },
+    {
+      "id": "mode-label",
+      "text": "VICTORY WASH",
+      "fontSize": 18,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsBrowserSourceHints": {
+    "baseWidth": 1920,
+    "baseHeight": 1080,
+    "recommendedFps": 60,
+    "refreshWhenSceneBecomesActive": true
+  },
+  "exportNotes": {
+    "transparentWebcamCenter": false,
+    "noBlackFillInsideCameraRegion": false,
+    "intendedUse": "browser source scene background"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:25:12.213Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "originalArtworkOnly": true,
+    "animationTier": "premium"
+  }
+}

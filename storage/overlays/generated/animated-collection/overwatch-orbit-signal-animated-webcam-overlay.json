@@ -1,0 +1,152 @@
+{
+  "title": "Overwatch Orbit Signal Animated Webcam Overlay",
+  "slug": "overwatch-orbit-signal-animated-webcam-overlay",
+  "schemaVersion": "streamforge.obs.motion.v1",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "transparentBackground": true
+  },
+  "category": "Overwatch",
+  "overlayType": "Webcam Overlay",
+  "sourceInspiration": {
+    "template": "overwatch",
+    "notes": "Original animation system inspired by your Overwatch overlay direction without copying proprietary art."
+  },
+  "layout": {
+    "cameraFrame": {
+      "x": 70,
+      "y": 690,
+      "width": 568,
+      "height": 322,
+      "transparentCenter": true,
+      "safeInset": 16
+    },
+    "sceneBars": null,
+    "callouts": [
+      {
+        "x": 70,
+        "y": 80,
+        "width": 420,
+        "height": 72,
+        "label": "title cluster"
+      },
+      {
+        "x": 1450,
+        "y": 80,
+        "width": 360,
+        "height": 72,
+        "label": "live status"
+      }
+    ]
+  },
+  "visualStyle": {
+    "energy": "competitive signal hum",
+    "shapeLanguage": "hero-panel beveled frame",
+    "accentColor": "#67d4ff",
+    "secondaryColor": "#f59b3d",
+    "atmosphere": "arena-ready command deck with broadcast focus"
+  },
+  "animatedSources": [
+    {
+      "id": "ambient-gradient",
+      "type": "gradientField",
+      "blendMode": "screen",
+      "opacity": 0.72,
+      "animation": {
+        "kind": "drift",
+        "durationMs": 4440,
+        "easing": "easeInOutSine",
+        "loop": true,
+        "keyframes": [
+          {
+            "progress": 0,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          },
+          {
+            "progress": 0.5,
+            "offsetX": 0.03,
+            "offsetY": 0.02,
+            "scale": 1.03
+          },
+          {
+            "progress": 1,
+            "offsetX": -0.02,
+            "offsetY": -0.01,
+            "scale": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "scanline-hum",
+      "type": "lineSweep",
+      "opacity": 0.18,
+      "animation": {
+        "kind": "scan",
+        "durationMs": 2550,
+        "direction": "horizontal",
+        "loop": true
+      }
+    },
+    {
+      "id": "accent-trace",
+      "type": "borderTrace",
+      "color": "#67d4ff",
+      "secondaryColor": "#f59b3d",
+      "animation": {
+        "kind": "pathGlow",
+        "durationMs": 3450,
+        "loop": true,
+        "intensityRange": [
+          0.4,
+          1
+        ]
+      }
+    },
+    {
+      "id": "status-pulse",
+      "type": "statusBadge",
+      "anchor": "frame-corner",
+      "animation": {
+        "kind": "pulse",
+        "durationMs": 1800,
+        "loop": true
+      }
+    }
+  ],
+  "textLayers": [
+    {
+      "id": "game-label",
+      "text": "OVERWATCH",
+      "fontSize": 34,
+      "letterSpacing": 0.16
+    },
+    {
+      "id": "mode-label",
+      "text": "ORBIT SIGNAL",
+      "fontSize": 18,
+      "letterSpacing": 0.24
+    }
+  ],
+  "obsBrowserSourceHints": {
+    "baseWidth": 1920,
+    "baseHeight": 1080,
+    "recommendedFps": 60,
+    "refreshWhenSceneBecomesActive": true
+  },
+  "exportNotes": {
+    "transparentWebcamCenter": true,
+    "noBlackFillInsideCameraRegion": true,
+    "intendedUse": "browser source webcam frame"
+  },
+  "metadata": {
+    "createdAt": "2026-05-17T02:24:35.198Z",
+    "createdBy": "StreamForge Overlay Empire",
+    "originalArtworkOnly": true,
+    "animationTier": "premium"
+  }
+}
