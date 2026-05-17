@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  CUSTOMER
+  ADMIN
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum BatchStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  role         UserRole   @default(CUSTOMER)
+  createdAt    DateTime   @default(now())
+  orders       Order[]
+  downloads    Download[]
+}
+
+model Product {
+  id               String      @id @default(cuid())
+  title            String
+  slug             String      @unique
+  description      String
+  price            Int
+  gameCategory     String
+  overlayType      String
+  previewImage     String
+  downloadFilePath String
+  includedFiles    String[]
+  ratingAverage    Float       @default(4.8)
+  totalSales       Int         @default(0)
+  isFeatured       Boolean     @default(false)
+  isActive         Boolean     @default(true)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+  orderItems       OrderItem[]
+  downloads        Download[]
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  userId          String
+  stripeSessionId String      @unique
+  total           Int
+  status          OrderStatus @default(PENDING)
+  createdAt       DateTime    @default(now())
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items           OrderItem[]
+  downloads       Download[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  productId String
+  price     Int
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model Download {
+  id            String   @id @default(cuid())
+  userId        String
+  productId     String
+  orderId       String
+  downloadCount Int      @default(0)
+  createdAt     DateTime @default(now())
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  order         Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId, orderId])
+}
+
+model GeneratedOverlayBatch {
+  id           String      @id @default(cuid())
+  gameCategory String
+  overlayType  String
+  quantity     Int
+  status       BatchStatus @default(PENDING)
+  createdAt    DateTime    @default(now())
+}
